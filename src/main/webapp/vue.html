@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/mvvm.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--    <script src="https://unpkg.com/vue@next"></script>-->
+    <style>
+        [v-clock] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div id="app" v-clock>
+    <p>{{current1}}</p>
+
+</div>
+</body>
+
+<script>
+    var vm = new Vue({
+        el: "#app",
+        methods:{
+            current1:function (){
+                return Date.now();
+            }
+        },
+        computed:{
+            current1:function (){
+                return Date.now()+'assasa';
+            }
+        }
+    })
+</script>
+</html>
